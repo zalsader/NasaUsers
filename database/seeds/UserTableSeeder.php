@@ -10,6 +10,7 @@ class UserTableSeeder extends Seeder {
     public function run() {
     	DB::table('users')->delete();
 
-    	User::create(['name' => 'admin', 'password' => bcrypt(env('ADMIN_PASSWORD', 'password'))]);
+    	$user = User::create(['name' => 'admin', 'password' => bcrypt(env('ADMIN_PASSWORD', 'password'))]);
+      $user->attachRole(Role::whereName('volunteer')->first());
     }
 }

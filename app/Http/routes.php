@@ -19,3 +19,6 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::resource('groups', 'GroupsController');
+Route::resource('groups.users', 'GroupUsersController');

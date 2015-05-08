@@ -149,6 +149,7 @@ return [
 		 * vendor service providers...
 		 */
 		'Zizaco\Entrust\EntrustServiceProvider',
+		'Kris\LaravelFormBuilder\FormBuilderServiceProvider',
 	],
 
 	/*
@@ -199,8 +200,9 @@ return [
 
 		/*
 		 * Vendor
-		 */ 
+		 */
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
+		'FormBuilder' => 'Kris\LaravelFormBuilder\Facades\FormBuilder',
 	],
 
 ];

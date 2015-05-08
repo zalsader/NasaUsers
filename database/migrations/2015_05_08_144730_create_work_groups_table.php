@@ -17,6 +17,7 @@ class CreateWorkGroupsTable extends Migration {
 			$table->increments('id');
 			$table->string('name')->unique();
 			$table->text('description');
+			$table->string('permalink');
 			$table->timestamps();
 		});
 		Schema::create('user_work_group', function(Blueprint $table)
